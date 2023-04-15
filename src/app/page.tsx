@@ -4,12 +4,10 @@ import { ChevronDown } from 'lucide-react'
 import { Stack } from '@/components/Stack'
 import Link from 'next/link'
 import dayjs from 'dayjs'
-
 const exo = Exo_2({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    // <main className={`${exo.className} flex h-screen w-screen bg-zinc-900 gradient-radial text-white justify-center flex-col items-center`}>
     <main className={`${exo.className} scroll-smooth flex w-full h-full overflow-x-hidden bg-background bg-center text-white justify-center flex-col items-center`}>
       <section className="flex flex-col items-center justify-center w-screen h-screen text-white bg-center bg-background">
         <div className="flex flex-row items-center justify-around w-screen h-screen">
@@ -22,12 +20,7 @@ export default function Home() {
               <h1 className="text-5xl font-bold text-purple-600 max-sm:text-2xl">
                 kouzoukian
               </h1>
-              <p className="mt-3 mb-6 max-sm:mt-2 max-sm:mb-4 text-lg text-zinc-400 max-sm:text-sm">design and software engineer</p>
-              <Link href="#aboutme" scroll={false} legacyBehavior className="h-12 px-4 py-2 max-sm:h-10 max-sm:w-28 max-sm:text-sm bg-purple-700 border-2 border-purple-500 rounded-lg w-36 hover:bg-purple-900 hover:border-purple-700">
-                <a className="h-12 px-4 py-2 max-sm:h-10 max-sm:w-28 max-sm:text-sm bg-purple-700 border-2 border-purple-500 rounded-lg w-36 hover:bg-purple-900 hover:border-purple-700">
-                  learn more
-                </a>
-              </Link>
+              <p className="mt-3 mb-6 max-sm:mt-2 max-sm:mb-4 text-lg text-zinc-400 max-sm:text-sm">designer and software engineer</p>
             </div>
             <Image src='/photo.jpg' alt='' width={250} height={250} className="p-2 rounded-full ring-purple-700 ring-4 max-sm:w-1/3 max-sm:h-1/3 max-sm:ring-2 max-sm:p-1"/>
           </div>
@@ -48,7 +41,6 @@ export default function Home() {
           <p>
             Since 2017 learning new languages and technologies to improve my learning skill and my coding skill! I&apos;m bilingual speaking Portuguese 🇧🇷 (Fluent) and English 🇦🇺 (Begineer). 
           </p>
-          
         </div>
       </section>
       <footer className="flex flex-row items-center justify-center w-screen gap-8 p-4 bg-zinc-800">
