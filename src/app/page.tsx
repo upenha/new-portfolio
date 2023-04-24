@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Exo_2 } from 'next/font/google'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, Moon, Sun } from 'lucide-react'
 import { Stack } from '@/components/Stack'
 import Link from 'next/link'
 import dayjs from 'dayjs'
@@ -9,6 +9,9 @@ const exo = Exo_2({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main className={`${exo.className} scroll-smooth flex w-full h-full overflow-x-hidden bg-zinc-900 bg-background bg-center text-white justify-center flex-col items-center`}>
+      <div className="absolute flex items-center justify-center w-12 h-12 border-2 rounded-lg top-8 right-8 bg-zinc-800 border-zinc-700">
+        <Sun />
+      </div>
       <section className="flex flex-col items-center justify-center w-screen h-screen text-white bg-center bg-background">
         <div className="flex flex-row items-center justify-around w-screen h-screen">
           <div className="flex flex-row items-center justify-around w-2/3 gap-1 max-sm:gap-0">
@@ -25,7 +28,7 @@ export default function Home() {
             <Image src='/photo.jpg' alt='' width={250} height={250} className="p-2 rounded-full ring-purple-700 ring-4 max-sm:w-1/3 max-sm:h-1/3 max-sm:ring-2 max-sm:p-1"/>
           </div>
         </div>
-        <Link href="#aboutme" className="absolute p-2 rounded-full bottom-6 bg-zinc-700 animate-bounce">
+        <Link href="#aboutme" aria-label="Link to About me section" className="absolute p-2 rounded-full bottom-6 bg-zinc-700 animate-bounce">
           <ChevronDown size={32} color='#ffffff' className="pt-[3px]"/>
         </Link>
       </section>
