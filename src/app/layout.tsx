@@ -1,4 +1,6 @@
-import './globals.css'
+import { Exo_2 } from 'next/font/google'
+import '../styles/globals.css'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
   title: 'Upenha',
@@ -20,6 +22,12 @@ export const metadata = {
 }
 
 
+const exo = Exo_2({ 
+  display: 'swap',
+  subsets: ['latin'] 
+
+})
+
 export default function RootLayout({
   children,
 }: {
@@ -27,7 +35,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={exo.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
