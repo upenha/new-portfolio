@@ -35,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={exo.className}>
+      <body className={exo.className} suppressHydrationWarning>
         {children}
         <Analytics />
       </body>

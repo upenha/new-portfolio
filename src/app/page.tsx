@@ -1,16 +1,22 @@
-import { Exo_2 } from 'next/font/google'
+'use client'
 import MainSection from '@/components/MainSection'
 import AboutMeSection from '@/components/AboutMeSection'
 import Footer from '@/components/Footer'
-const exo = Exo_2({ subsets: ['latin'] })
+import { LanguageProvider } from '@/contexts/LanguageContext'
+import { LanguageButton } from '@/components/LanguageButton'
 
-export default function Home() {
+function Home ()  {
   return (
-    <main className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden text-white bg-center scroll-smooth bg-zinc-900 bg-background">
-      <MainSection />
-      <AboutMeSection />
-      <Footer />
-      
-    </main>
+    <LanguageProvider>
+      <main className="flex flex-col items-center justify-center w-full h-full overflow-x-hidden text-white bg-center scroll-smooth bg-zinc-900 bg-background">
+        <MainSection />
+        <AboutMeSection />
+        <Footer />
+        <LanguageButton />
+        
+      </main>
+    </LanguageProvider>  
   )
 }
+
+export default Home

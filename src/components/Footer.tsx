@@ -1,6 +1,9 @@
+import { LanguageContext } from "@/contexts/LanguageContext"
 import { Github, Instagram, MessageCircle, Twitter } from "lucide-react"
+import { useContext } from "react"
 
 const Footer = () => {
+  const { t } = useContext(LanguageContext)
   return (
     <footer className="flex flex-col items-center justify-center w-screen gap-2 p-2 bg-zinc-800">
       
@@ -23,7 +26,7 @@ const Footer = () => {
         </a>
       </div>
       <p className="text-xs font-light text-zinc-400">
-        © 2023 All rights reserved.
+        {t('footer')}
       </p>
     </footer>
   )
